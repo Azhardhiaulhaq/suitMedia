@@ -11,13 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="284dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/masukkan_nama"
         android:inputType="textPersonName"
-        android:text="@string/masukkan_nama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/NextBtn"
