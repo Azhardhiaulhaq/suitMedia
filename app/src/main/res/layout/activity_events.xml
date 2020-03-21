@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuestActivity">
+    tools:context=".EventsActivity">
 
     <TextView
-        android:id="@+id/GuestPageTV"
+        android:id="@+id/EventPageTV"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
         android:background="#808080"
-        android:text="GUEST"
+        android:text="@string/event"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -22,11 +22,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/GuestRV"
-        android:layout_width="412dp"
+        android:id="@+id/EventRV"
+        android:layout_width="0dp"
         android:layout_height="683dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GuestPageTV" />
+        app:layout_constraintTop_toBottomOf="@+id/EventPageTV" />
 </androidx.constraintlayout.widget.ConstraintLayout>
