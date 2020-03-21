@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -86,7 +87,8 @@ public class GuestActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new GuestAdapter(GuestDatalist);
+        mAdapter = new GuestAdapter(GuestDatalist,this);
         recyclerView.setAdapter(mAdapter);
     }
+
 }
