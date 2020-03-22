@@ -28,10 +28,12 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestAdapter.MyViewHolder
         public TextView tvGuestName;
         public ConstraintLayout guestConstraintLayout;
         public Activity activity;
+        public TextView tvMonth;
 
         public MyViewHolder(View v){
             super(v);
             tvGuestName = (TextView) v.findViewById(R.id.guestNameTV);
+            tvMonth = (TextView) v.findViewById(R.id.monthTV);
             guestConstraintLayout = (ConstraintLayout) v.findViewById(R.id.guestDetailCL);
         }
     }
@@ -49,7 +51,14 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position){
         holder.tvGuestName.setText(mDataset.get(position).getGuestName());
-
+        String birthDate = mDataset.get(position).getGuestBirthDate();
+        String[] birth = birthDate.split("-",3);
+        String month = birth[1];
+        if(isPrime(Integer.parseInt(month))){
+            holder.tvMonth.setText("The Month is Prime");
+        } else {
+            holder.tvMonth.setText("The Month is not Prime");
+        }
         holder.guestConstraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +80,28 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestAdapter.MyViewHolder
         guestIntent.putExtra("guestBirthDate",BirthDate);
         mActivity.setResult(Activity.RESULT_OK,guestIntent);
         mActivity.finish();
+    }
+
+    public Boolean isPrime (int number){
+        Boolean isprime = true;
+        if (number < 2){
+            isprime = false;
+        } else if (number == 2 ){
+            isprime = true;
+        } else {
+            int count = 0;
+            for (int i = 2 ; i <= number; i++){
+                if (number % i == 0){
+                    count++;
+                }
+            }
+            if (count == 2){
+                isprime = true;
+            } else {
+                isprime = false;
+            }
+        }
+        return isprime;
     }
 
 }

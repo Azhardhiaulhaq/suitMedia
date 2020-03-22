@@ -4,30 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_validation"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/InsertNamaET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="284dp"
+        android:layout_width="329dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="540dp"
         android:autofillHints=""
-        android:ems="10"
+        android:background="@drawable/text_field"
+        android:ems="0"
         android:hint="@string/masukkan_nama"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/NextBtn"
-        android:layout_width="156dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/next"
+        android:layout_width="329dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="76dp"
         android:onClick="sendName"
+        android:text="@string/selesai"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InsertNamaET" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/InsertNamaET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTV"
+        app:srcCompat="@drawable/btn_add_photo" />
+
+    <TextView
+        android:id="@+id/SelamatDatangTV"
+        android:layout_width="190dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="56dp"
+        android:text="Selamat Datang!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descTV"
+        android:layout_width="213dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:text="Sertakan gambar profil Anda untuk melengkapi profil."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SelamatDatangTV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

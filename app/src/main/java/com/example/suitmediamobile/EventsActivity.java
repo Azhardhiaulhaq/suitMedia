@@ -32,10 +32,10 @@ public class EventsActivity extends AppCompatActivity {
         mActivity = EventsActivity.this;
         mDataset = new ArrayList<>();
         //Add Events Data
-        mDataset.add(new Events("Hangout Around Town","2020-03-23","https://image.flaticon.com/icons/png/512/1458/1458512.png"));
-        mDataset.add(new Events("Meeting 1","2020-04-01","https://image.flaticon.com/icons/png/512/115/115902.png"));
-        mDataset.add(new Events("Football MatchDay","2020-05-02","https://img.favpng.com/10/3/10/football-player-sport-computer-icons-png-favpng-7ypZt7RGHDMnDrmP3v6L3WX2H.jpg"));
-        mDataset.add(new Events("Badminton MatchDay","2020-05-04","https://image.flaticon.com/icons/png/512/121/121489.png"));
+        mDataset.add(new Events("Hangout Around Town","2020-03-23","https://image.flaticon.com/icons/png/512/1458/1458512.png","This is version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquer. Aenean gravida nibh vel velt auctor aliquet..."));
+        mDataset.add(new Events("Meeting 1","2020-04-01","https://image.flaticon.com/icons/png/512/115/115902.png","This is version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquer. Aenean gravida nibh vel velt auctor aliquet..."));
+        mDataset.add(new Events("Football MatchDay","2020-05-02","https://img.favpng.com/10/3/10/football-player-sport-computer-icons-png-favpng-7ypZt7RGHDMnDrmP3v6L3WX2H.jpg","This is version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquer. Aenean gravida nibh vel velt auctor aliquet..."));
+        mDataset.add(new Events("Badminton MatchDay","2020-05-04","https://image.flaticon.com/icons/png/512/121/121489.png","This is version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquer. Aenean gravida nibh vel velt auctor aliquet..."));
 
         //Generate DataList
         generateDataList(mDataset);
