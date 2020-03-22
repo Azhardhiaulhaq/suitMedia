@@ -32,6 +32,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
         public TextView tvEventDate;
         public ConstraintLayout eventConstraintLayout;
         public ImageView ivEvent;
+        public TextView tvEventDesc;
         public Activity activity;
 
         public MyViewHolder(View v){
@@ -40,6 +41,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
             tvEventDate = (TextView) v.findViewById(R.id.eventsDateTV);
             ivEvent = (ImageView) v.findViewById(R.id.eventsIV);
             eventConstraintLayout = (ConstraintLayout) v.findViewById(R.id.eventsCL);
+            tvEventDesc = (TextView) v.findViewById(R.id.eventDescriptionTV);
         }
     }
 
@@ -57,6 +59,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
     public void onBindViewHolder(final EventsAdapter.MyViewHolder holder, final int position){
         holder.tvEventName.setText(mDataset.get(position).getEventName());
         holder.tvEventDate.setText(mDataset.get(position).getEventDate());
+        holder.tvEventDesc.setText(mDataset.get(position).getEventDescription());
         Picasso.get().load(mDataset.get(position).getEventURL()).into(holder.ivEvent);
 
         holder.eventConstraintLayout.setOnClickListener(new View.OnClickListener() {
