@@ -43,11 +43,15 @@ public class EventsActivity extends AppCompatActivity {
         mDataset.add(new Events("Football MatchDay","June 02, 2020","https://img.favpng.com/10/3/10/football-player-sport-computer-icons-png-favpng-7ypZt7RGHDMnDrmP3v6L3WX2H.jpg","This is version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquer. Aenean gravida nibh vel velt auctor aliquet...",-6.874735,107.611878));
         mDataset.add(new Events("Badminton MatchDay","June 04, 2020","https://image.flaticon.com/icons/png/512/121/121489.png","This is version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquer. Aenean gravida nibh vel velt auctor aliquet...",-6.875542, 107.613262));
 
-        // AddIV
-        ArrayList<Events> arrEvents = new ArrayList<>(mDataset.size());
-        arrEvents.addAll(mDataset);
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList("ArrEvents",arrEvents);
+//        // AddIV
+//        ArrayList<Events> arrEvents = new ArrayList<>(mDataset.size());
+//        arrEvents.addAll(mDataset);
+//        Bundle bundle = new Bundle();
+//        bundle.putParcelableArrayList("ArrEvents",arrEvents);
+//        MapFragment mapFragment = new MapFragment();
+//        mapFragment.setArguments(bundle);
+//        getSupportFragmentManager().beginTransaction().replace(R.id.eventsCL,mapFragment).commit();
+
 
         //Generate DataList
         generateDataList(mDataset);
